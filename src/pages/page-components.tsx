@@ -1,7 +1,10 @@
 import Button from "../components/button";
 import Container from "../components/container";
+import Logo from "../components/logo";
 import Text from "../components/text";
 import TextInput from "../components/text-input";
+import TimeSelect from "../components/time-select";
+
 
 export default function PageComponents() {
     return (
@@ -22,6 +25,16 @@ export default function PageComponents() {
 
                 <div>
                     <TextInput />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    <TimeSelect>09:00</TimeSelect>
+                    <TimeSelect disabled>10:00</TimeSelect>
+                    <TimeSelect aria-pressed>11:00</TimeSelect>
+                </div>
+
+                <div>
+                    <Logo />
                 </div>
             </div>
         </Container>

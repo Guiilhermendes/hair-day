@@ -9,10 +9,14 @@ export const textVariants = cva("", {
             "title-sm": "text-sm leading-5 font-bold",
             "text-md": "text-base leading-6",
             "text-sm": "text-sm leading-5",
+        },
+        disabled: {
+            true: "pointer-events-none"
         }
     },
     defaultVariants: {
-        variant: "text-md"
+        variant: "text-md",
+        disabled: false
     }
 });
 
@@ -25,6 +29,7 @@ interface TextProps extends VariantProps<typeof textVariants> {
 export default function Text({
     as = "span",
     variant,
+    disabled,
     className,
     children,
     ...props
@@ -32,7 +37,11 @@ export default function Text({
     return React.createElement(
         as,
         {
-            className: textVariants({variant, className}),
+            className: textVariants({
+                variant,
+                disabled,
+                className
+            }),
             ...props
         },
         children
