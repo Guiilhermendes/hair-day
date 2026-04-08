@@ -6,7 +6,7 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route>
+                <Route >
                     <Route index element={<PageHome />}></Route>
                     <Route path="/components" element={<PageComponents />}></Route>
                 </Route>

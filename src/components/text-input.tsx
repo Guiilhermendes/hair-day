@@ -37,7 +37,7 @@ export default function TextInput({
                 className={cx(
                     textInputVariants({size}),
                     textVariants({
-                        className: "text-gray-400"
+                        className: "text-gray-200 placeholder:text-gray-400"
                     }),
                     "pl-10",
                     className

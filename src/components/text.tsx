@@ -4,7 +4,7 @@ import React from "react";
 export const textVariants = cva("", {
     variants: {
         variant: {
-            "title-lg": "text-3xl leading-6 font-bold",
+            "title-lg": "text-2xl leading-6 font-bold",
             "title-md": "text-base leading-6 font-bold",
             "title-sm": "text-sm leading-5 font-bold",
             "text-md": "text-base leading-6",
